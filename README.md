@@ -34,9 +34,9 @@ The ultimate goal is to infiltrate the estate and retrieve **three hidden artifa
 
 ## The Team
 
-* **Adal:** Project Architect & Lead Artist (Environment, Sprites, Lighting)
-* **Miray:** Technical Lead & Gameplay Programmer
-* **Çağatay:** Level Designer & World Builder
+* Adal: Project Architect & Visual Systems Design
+* Çağatay: Lead Designer & Narrative Architect
+* Miray: Lead Programmer & Systems Engineer
 
 ## Project Structure
 
