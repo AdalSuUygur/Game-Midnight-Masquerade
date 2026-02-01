@@ -130,7 +130,7 @@ GameObject:
   - component: {fileID: 38199392}
   m_Layer: 0
   m_Name: Player
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -199,7 +199,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2f8d8da4f5285ab47a9ba4b87fd124b2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  groundTilemap: {fileID: 0}
+  groundTilemap: {fileID: 1720761324}
   patienceTile: {fileID: 11400000, guid: 7593122dd298b9f45b0c713521b6c33f, type: 2}
   maidTile: {fileID: 11400000, guid: a692b08c29370e2428b2c0035c83ffdd, type: 2}
   musicianTile: {fileID: 11400000, guid: aa20ecd36eafe58478f3192ca3d7f58f, type: 2}
