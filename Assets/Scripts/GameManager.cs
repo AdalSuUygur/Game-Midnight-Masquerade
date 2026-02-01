@@ -37,9 +37,16 @@ public class GameManager : MonoBehaviour
     private void OnSceneLoaded(Scene arg0, LoadSceneMode arg1)
     {
         GameObject player = GameObject.FindGameObjectWithTag("Player");
-        Debug.Log(player);
         GameObject spawnPoint = GameObject.FindGameObjectWithTag("Respawn");
-        Debug.Log(spawnPoint);
-        player.transform.position = spawnPoint.transform.position;
+
+        if (player != null && spawnPoint != null)
+        {
+             player.transform.position = spawnPoint.transform.position;
+        }
+        else
+        {
+            if (player == null) Debug.LogError("Player object not found in the scene! Make sure an object is tagged 'Player'.");
+            if (spawnPoint == null) Debug.LogError("SpawnPoint object not found in the scene! Make sure an object is tagged 'Respawn'.");
+        }
     }
 }

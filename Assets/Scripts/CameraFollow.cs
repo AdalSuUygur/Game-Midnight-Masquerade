@@ -8,9 +8,15 @@ public class CameraFollow : MonoBehaviour
     public float startX;
     private void Start()
     {
-        target = GameObject.FindWithTag("Player").transform;
-        Debug.Log(target);
-        offset = new Vector3(0, 0, -10);
+        offset = new Vector3(0, -2f, -10);
+        var player = GameObject.FindWithTag("Player");
+        if (player)
+        {
+            target = player.transform;
+            // Snap immediately to avoid lerp delay, respecting bounds
+            float targetX = Mathf.Max(target.position.x + offset.x, startX);
+            transform.position = new Vector3(targetX, target.position.y + offset.y, offset.z);
+        }
     }
     void LateUpdate()
     {
@@ -18,7 +24,12 @@ public class CameraFollow : MonoBehaviour
         {
           var player = GameObject.FindWithTag("Player");
             if (player)
+            {
                 target = player.transform;
+                // Snap immediately to avoid lerp delay, respecting bounds
+                float targetX = Mathf.Max(target.position.x + offset.x, startX);
+                transform.position = new Vector3(targetX, target.position.y + offset.y, offset.z);
+            }
             else
             {
                 return;
