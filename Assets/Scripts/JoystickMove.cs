@@ -6,6 +6,7 @@ public class JoystickMove : MonoBehaviour
     public float playerSpeed;
     private Rigidbody2D rgb2d;
     PlayerController playerController;
+
     private void Awake()
     {
         movementJoystick = GameObject.Find("Floating Joystick").GetComponent<FloatingJoystick>();
@@ -25,11 +26,14 @@ public class JoystickMove : MonoBehaviour
         //{
         //    rgb2d.linearVelocity = Vector2.zero;
         //}
+    }
+    private void FixedUpdate()
+    {
         Move();
     }
     public void Move()
     {
-        if (movementJoystick.Direction.y != 0 && playerController.canMove)
+        if (movementJoystick.Direction.y != 0)
         {
             rgb2d.linearVelocity = new Vector2(movementJoystick.Direction.x * playerSpeed, movementJoystick.Direction.y * playerSpeed);
         }
@@ -38,5 +42,4 @@ public class JoystickMove : MonoBehaviour
             rgb2d.linearVelocity = Vector2.zero;
         }
     }
-
 }

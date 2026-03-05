@@ -25,40 +25,24 @@ public class PlayerController : MonoBehaviour
 
     void Update()
     {
+        switch (currentZone){
+            case ZoneType.RedZone:
+                MoveWithRedMask(maskName);
+                break;
+            case ZoneType.BlueZone:
+                MoveWithBlueMask(maskName);
+                break;
+            case ZoneType.GreenZone:
+                MoveWithGreenMask(maskName);
+                break;
+        }
         if (!canMove)
         {
             Debug.Log(canMove);
             rgb2d.linearVelocity = Vector2.zero;
             return;
         }
-        Vector3Int cell = groundTilemap.WorldToCell(transform.position);
-        momentTile = groundTilemap.GetTile(cell);
-        previousPosition = transform.position;
-        
-        if (momentTile == patienceTile )
-        {
-            StartCoroutine(SetCanMove());
-        }
-        else if (momentTile == musicianTile && maskName == "Green Mask")
-        {
-            //momentPosition = transform.position;
-            if (momentPosition == previousPosition)
-            {
-                Debug.Log("Canýn azaldý");
-            }
-        }
-        else if (momentTile == maidTile && maskName == "Blue Mask")
-        {
-            Debug.Log("Maid");
-        }
-        else if(momentTile==groundTile)
-        {
-            Debug.Log("Ground");
-        }
-        else
-        {
-            //can azaldý
-        }
+       
     }
     private void FixedUpdate()
     {
@@ -69,22 +53,85 @@ public class PlayerController : MonoBehaviour
     }
     public void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.gameObject.tag == "Finish")
+        switch (collision.gameObject.name)
         {
-            GameManager.PrepareScene();
+            case TileMapNameAristocrat:
+                SetZoneType(ZoneType.RedZone);
+                break;
+            case TileMapNameMaid:
+                SetZoneType(ZoneType.BlueZone);
+                break;
+            case TileMapNameMusician:
+                SetZoneType(ZoneType.GreenZone);
+                break;
+            case TileMapNameGround:
+                SetZoneType(ZoneType.Ground);
+                break;
         }
-        if (collision.gameObject.tag == "Mask")
+
+
+    }
+    public void OnTriggerExit2D(Collider2D collision)
+    {
+        switch (collision.gameObject.name)
         {
-            maskName = collision.gameObject.name;
-            Destroy(collision.gameObject);
+            case TileMapNameAristocrat:
+                SetZoneType(ZoneType.RedZone);
+                break;
+            case TileMapNameMaid:
+                SetZoneType(ZoneType.BlueZone);
+                break;
+            case TileMapNameMusician:
+                SetZoneType(ZoneType.GreenZone);
+                break;
+            case TileMapNameGround:
+                SetZoneType(ZoneType.Ground);
+                break;
+        }
+    }
+    public void SetZoneType(ZoneType zoneType)
+    {
+        currentZone = zoneType;
+    }
+    public void MoveWithRedMask(string maskName)
+    {
+        if (maskName != RedMask)
+        {
+            gameController.IncreaseAware();
+        }
+        else
+        {
+            StartCoroutine(SetCanMove());
         }
 
     }
+    public void MoveWithBlueMask(string maskName)
+    {
+        if (maskName != BlueMask)
+        {
+            gameController.IncreaseAware();
+        }
+        else
+        {
+
+        }
+    }
+    public void MoveWithGreenMask(string maskName)
+    {
+        if (maskName != GreenMask)
+        {
+            gameController.IncreaseAware();
+        }
+        else
+        {
+
+        }
+    }
+
     public IEnumerator SetCanMove()
     {
         canMove = false;
         yield return new WaitForSeconds(1.5f);
         canMove = true;
     }
-
 }
