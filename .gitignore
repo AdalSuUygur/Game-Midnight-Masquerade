@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-=======
 Archive_v1/
 
 /[Ll]ibrary/
@@ -35,7 +33,7 @@ Archive_v1/
 
 
 
->>>>>>> b41c290761a04ba6737165245a0e5cda1d0872be
+
 # This .gitignore file should be placed at the root of your Unity project directory
 #
 # Get latest from https://github.com/github/gitignore/blob/main/Unity.gitignore

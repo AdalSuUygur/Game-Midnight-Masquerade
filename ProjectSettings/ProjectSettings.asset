@@ -4,11 +4,9 @@
 PlayerSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 28
-<<<<<<< HEAD
-  productGUID: f7115df6a6b6b224c8e38c0cbabeec8a
-=======
   productGUID: 544c363d389b26e46b877e95b8dfc6df
->>>>>>> b41c290761a04ba6737165245a0e5cda1d0872be
+  productGUID: f7115df6a6b6b224c8e38c0cbabeec8a
+
   AndroidProfiler: 0
   AndroidFilterTouchesWhenObscured: 0
   AndroidEnableSustainedPerformanceMode: 0
@@ -17,11 +15,9 @@ PlayerSettings:
   useOnDemandResources: 0
   accelerometerFrequency: 60
   companyName: DefaultCompany
-<<<<<<< HEAD
-  productName: MidnightMasquerade
-=======
   productName: Game_Midnight_Masquerade
->>>>>>> b41c290761a04ba6737165245a0e5cda1d0872be
+  productName: MidnightMasquerade
+
   defaultCursor: {fileID: 0}
   cursorHotspot: {x: 0, y: 0}
   m_SplashScreenBackgroundColor: {r: 0.13725491, g: 0.12156863, b: 0.1254902, a: 1}
@@ -301,7 +297,6 @@ PlayerSettings:
   androidSymbolsSizeThreshold: 800
   m_BuildTargetIcons: []
   m_BuildTargetPlatformIcons:
-<<<<<<< HEAD
   - m_BuildTarget: iPhone
     m_Icons:
     - m_Textures: []
@@ -399,8 +394,7 @@ PlayerSettings:
       m_Height: 1024
       m_Kind: 4
       m_SubKind: App Store
-=======
->>>>>>> b41c290761a04ba6737165245a0e5cda1d0872be
+
   - m_BuildTarget: Android
     m_Icons:
     - m_Textures: []
@@ -898,22 +892,18 @@ PlayerSettings:
   editorAssembliesCompatibilityLevel: 1
   m_RenderingPath: 1
   m_MobileRenderingPath: 1
-<<<<<<< HEAD
-  metroPackageName: MidnightMasquerade
-=======
   metroPackageName: Game_Midnight_Masquerade
->>>>>>> b41c290761a04ba6737165245a0e5cda1d0872be
+  metroPackageName: MidnightMasquerade
+
   metroPackageVersion: 
   metroCertificatePath: 
   metroCertificatePassword: 
   metroCertificateSubject: 
   metroCertificateIssuer: 
   metroCertificateNotAfter: 0000000000000000
-<<<<<<< HEAD
-  metroApplicationDescription: MidnightMasquerade
-=======
   metroApplicationDescription: Game_Midnight_Masquerade
->>>>>>> b41c290761a04ba6737165245a0e5cda1d0872be
+  metroApplicationDescription: MidnightMasquerade
+
   wsaImages: {}
   metroTileShortName: 
   metroTileShowName: 0
@@ -984,19 +974,17 @@ PlayerSettings:
   captureStartupLogs: {}
   activeInputHandler: 2
   windowsGamepadBackendHint: 0
-<<<<<<< HEAD
-  cloudProjectId: 7c987fe6-4b6e-4d02-a7bf-80ffe651c552
-  framebufferDepthMemorylessMode: 0
-  qualitySettingsNames: []
-  projectName: MidnightMasquerade
-  organizationId: miraynazyigit
-=======
   cloudProjectId: 
   framebufferDepthMemorylessMode: 0
   qualitySettingsNames: []
   projectName: 
   organizationId: 
->>>>>>> b41c290761a04ba6737165245a0e5cda1d0872be
+  cloudProjectId: 7c987fe6-4b6e-4d02-a7bf-80ffe651c552
+  framebufferDepthMemorylessMode: 0
+  qualitySettingsNames: []
+  projectName: MidnightMasquerade
+  organizationId: miraynazyigit
+
   cloudEnabled: 0
   legacyClampBlendShapeWeights: 0
   hmiLoadingImage: {fileID: 0}
