@@ -1,0 +1,27 @@
+.
+├── Assets/
+│   ├── _Project/               # All custom game content
+│   │   ├── Art/                # Handled by Adal
+│   │   │   ├── Animations/
+│   │   │   ├── Palettes/       # Reference palettes
+│   │   │   ├── Sprites/
+│   │   │   │   ├── Characters/
+│   │   │   │   ├── Environment/
+│   │   │   │   ├── Props/
+│   │   │   │   └── UI/
+│   │   │   └── Tilesets/       # Modular tile assets
+│   │   ├── Audio/              # SFX and Music
+│   │   ├── Prefabs/            # Technical objects (Miray)
+│   │   ├── Scenes/             # Level design (Çağatay)
+│   │   │   ├── 00_MainMenu.unity
+│   │   │   ├── 01_NobleHall.unity
+│   │   │   ├── 02_ServantQuarters.unity
+│   │   │   └── 03_HedgeMaze.unity
+│   │   ├── Scripts/            # Programming (Miray)
+│   │   └── Settings/           # Configs, Input, Rendering
+├── Docs/                       # Documentation
+│   ├── Design/                 # GDD, Asset Lists
+│   ├── Technical/              # AI Diagrams, Logic
+│   └── StyleGuide/             # Visual standards
+├── README.md                   # Landing page
+└── .gitignore                  # Engine-specific ignore file

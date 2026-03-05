@@ -1,17 +1,23 @@
 using System.Collections;
 using UnityEngine;
+using UnityEngine.InputSystem;
 using UnityEngine.Tilemaps;
-using static Assets.Constants;
+using UnityEngine.UIElements;
 
 public class PlayerController : MonoBehaviour
 {
-    
-    public bool canMove = true;
+    public Tilemap groundTilemap;
+    public TileBase patienceTile;
+    public TileBase maidTile;
+    public TileBase musicianTile;
+    public TileBase groundTile;
+
+    TileBase momentTile;
+    public bool canMove=true;
+    Vector3 previousPosition, momentPosition;
     string maskName = string.Empty;
     float minSpeed = 0.5f;
-    GameController gameController;
     Rigidbody2D rgb2d;
-    ZoneType currentZone;
     void Start()
     {
         rgb2d = gameObject.GetComponent<Rigidbody2D>();
